@@ -1,12 +1,13 @@
 import Todo from './components/Todo'
 import Dashboard from './components/Dashboard'
 let routes = [{
-    path: "/",
+    path: "/todo",
     component: Todo,
     exact: true
 }, {
     path: "/dashboard",
-    component: Dashboard
+    component: Dashboard,
+    exact:true
 }]
 
 export default routes;

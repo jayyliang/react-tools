@@ -6,8 +6,8 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <Left/>
+                <div style={{display:"flex",width:"100%",height:"100%"}}>
+                    <Route path="/" component={Left}></Route>
                     {
                         routes.map((route, key) => {
                             return <Route key={key} path={route.path}

@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    height: 100vh;
+}
+.content{
+    background-color: rgba(128, 128, 128, 0.075);
+    width: 300px;
+    margin:20px 50px;
+    border-radius: 10px;
+    position: relative
+}
+.title{
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px
+}
+.add{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%)
+}
+.input{
+    margin: 10px 0 
+}

@@ -1,0 +1,26 @@
+.item {
+    background-color: #ffffff;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    min-height: 150px;
+    position: relative
+}
+
+.title {
+    font-size: 14px
+}
+
+.description {
+    background-color: #ffffff;
+    padding: 10px
+}
+.title-container{
+    display: flex
+}
+.icon{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    cursor: pointer;
+}
