@@ -1,25 +1,42 @@
-.container{
+.container {
     display: flex;
     height: 100vh;
 }
-.content{
+
+.item-container {
+    height: 85vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* ie10+隐藏滚动条 */
+    -ms-overflow-style: none;
+}
+
+/* chrome隐藏滚动条 */
+.item-container::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.content {
     background-color: rgba(128, 128, 128, 0.075);
     width: 300px;
-    margin:20px 50px;
+    margin: 20px 50px;
     border-radius: 10px;
     position: relative
 }
-.title{
+
+.title {
     font-size: 18px;
     font-weight: bolder;
     padding: 10px
 }
-.add{
+
+.add {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%)
 }
-.input{
-    margin: 10px 0 
+
+.input {
+    margin: 10px 0
 }

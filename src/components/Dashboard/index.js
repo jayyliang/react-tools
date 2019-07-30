@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
-import { Button, Modal, Input } from 'antd'
+import { Button, Modal, Input, message } from 'antd'
 import Item from './Item'
 class Dashboard extends Component {
     constructor(props) {
@@ -42,6 +42,14 @@ class Dashboard extends Component {
         return res.substr(0, n)
     }
     handleOk() {
+        if (!this.state.eventTitle) {
+            message.info('名称不能为空');
+            return
+        }
+        if (!this.state.eventContent) {
+            message.info('描述不能为空');
+            return
+        }
         let todoList = localStorage.getItem('todo') || []
         if (todoList.length !== 0) {
             todoList = JSON.parse(todoList)
@@ -64,24 +72,28 @@ class Dashboard extends Component {
         })
     }
     render() {
+        const titleLength = 15
+        const contentLength = 40
         return (
             <div className="container">
                 {this.state.head.map((item, index) => {
                     return (
                         <div key={index} className="content">
-                            {
-                                this.state.todoList.map(item => {
-                                    if (item.type === index) {
-                                        return (
-                                            <div key={item.id}>
-                                                <Item updateList={this.updateList.bind(this)} title={item.eventTitle} content={item.eventContent} id={item.id} type={item.type} />
-                                            </div>
-                                        )
-                                    }else{
-                                        return ''
-                                    }
-                                })
-                            }
+                            <div className="item-container">
+                                {
+                                    this.state.todoList.map(item => {
+                                        if (item.type === index) {
+                                            return (
+                                                <div key={item.id}>
+                                                    <Item updateList={this.updateList.bind(this)} title={item.eventTitle} content={item.eventContent} id={item.id} type={item.type} />
+                                                </div>
+                                            )
+                                        } else {
+                                            return ''
+                                        }
+                                    })
+                                }
+                            </div>
                             {
                                 index === 0 ? <div className="add"><Button onClick={this.add} type="primary">增加</Button></div> : ''
                             }
@@ -93,9 +105,10 @@ class Dashboard extends Component {
                     cancelText="取消"
                     onOk={this.handleOk}
                     onCancel={this.handleCancel} title="增加一个事件">
-                    <Input onChange={e => { this.setState({ eventTitle: e.target.value }) }} className="input" placeholder="输入事件名称" />
-                    <Input onChange={e => { this.setState({ eventContent: e.target.value }) }} className="input" placeholder="输入事件描述" />
+                    <Input maxLength={titleLength} onChange={e => { this.setState({ eventTitle: e.target.value }) }} className="input" placeholder="输入事件名称,不超过15字" />
+                    <Input maxLength={contentLength} onChange={e => { this.setState({ eventContent: e.target.value }) }} className="input" placeholder="输入事件描述,不超过40字" />
                 </Modal>
+
             </div>
         );
     }
