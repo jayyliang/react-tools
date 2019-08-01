@@ -1,0 +1,22 @@
+.hex-convert-container {
+    margin: 50px
+}
+
+.hex-convert-title {
+    display: flex;
+    align-items: center
+}
+
+.hex-convert-title h4 {
+    margin: 0px 20px;
+    padding-bottom: 20px
+}
+
+.hex-convert-input {
+    margin-bottom: 20px
+}
+
+.hex-convert-btn {
+    margin-bottom: 20px;
+    margin-left: 20px
+}

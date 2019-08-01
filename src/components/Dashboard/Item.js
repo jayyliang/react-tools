@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import { Popover, Button } from 'antd'
 import './item.css'
 class Item extends Component {
-    constructor(props) {
-        super(props)
-
-    }
     changeStatus(type) {
         let todoList = JSON.parse(localStorage.getItem('todo'))
         for (let i = 0; i < todoList.length; i++) {

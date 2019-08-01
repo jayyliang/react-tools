@@ -1,0 +1,28 @@
+.color-container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column
+}
+
+.container-input {
+    width: 100px;
+    margin-right: 20px
+}
+
+.rbg-container {
+    margin-top: 15px;
+}
+
+.color-content {
+    height: 300px;
+    width: 100%;
+}
+
+.rgb-copy {
+    margin-top: 10px
+}
+
+.hex-input {
+    width: 300px;
+    margin-right: 20px
+}

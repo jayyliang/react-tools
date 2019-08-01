@@ -1,0 +1,20 @@
+.input {
+    width: 600px;
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.button {
+    margin-left: 20px
+}
+
+.code {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.code-download {
+    padding-top: 30px;
+    padding-left: 30px;
+}
