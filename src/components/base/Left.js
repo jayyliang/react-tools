@@ -22,6 +22,9 @@ class Left extends Component {
                         <Menu.Item key="3"><Link to="/qrcode">二维码生成</Link></Menu.Item>
                         <Menu.Item key="4"><Link to="/color-exchange">颜色转换</Link></Menu.Item>
                         <Menu.Item key="5"><Link to="/hex-convert">进制转换</Link></Menu.Item>
+                        <Menu.Item key="6"> <Link to="/md5" >MD5加密</Link></Menu.Item >
+                        <Menu.Item key="7"> <Link to="/guid" >生成GUID</Link></Menu.Item >
+                        <Menu.Item key="8"> <Link to="/img2base64" >图片转base64</Link></Menu.Item >
                     </Menu.ItemGroup>
                 </Menu>
             </div>

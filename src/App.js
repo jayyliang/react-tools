@@ -12,14 +12,25 @@ const ColorExchange = Loadable({
     loading: LoadingComponent
 });
 const QrCode = Loadable({
-    loader:()=>import("./components/QrCode"),
-    loading:LoadingComponent
+    loader: () => import("./components/QrCode"),
+    loading: LoadingComponent
 })
-const HexConvert  = Loadable({
-    loader:()=>import("./components/HexConvert"),
-    loading:LoadingComponent
+const HexConvert = Loadable({
+    loader: () => import("./components/HexConvert"),
+    loading: LoadingComponent
 })
-
+const MD5 = Loadable({
+    loader: () => import("./components/MD5"),
+    loading: LoadingComponent
+})
+const GUID = Loadable({
+    loader: () => import("./components/GUID"),
+    loading: LoadingComponent
+})
+const Img2base64 = Loadable({
+    loader: () => import("./components/Img2base64"),
+    loading: LoadingComponent
+})
 class App extends Component {
     render() {
         return (
@@ -30,6 +41,9 @@ class App extends Component {
                     <Route path="/color-exchange" component={ColorExchange}></Route>
                     <Route path="/qrcode" component={QrCode}></Route>
                     <Route path="/hex-convert" component={HexConvert}></Route>
+                    <Route path="/md5" component={MD5}></Route>
+                    <Route path="/guid" component={GUID}></Route>
+                    <Route path="/img2base64" component={Img2base64}></Route>
                 </div>
             </BrowserRouter >
         );
