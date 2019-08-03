@@ -31,6 +31,18 @@ const Img2base64 = Loadable({
     loader: () => import("./components/Img2base64"),
     loading: LoadingComponent
 })
+const Chinese2pinyin = Loadable({
+    loader: () => import("./components/Chinese2pinyin"),
+    loading: LoadingComponent
+})
+const Simple2complex = Loadable({
+    loader: () => import("./components/Simple2complex"),
+    loading: LoadingComponent
+})
+const word2pdf = Loadable({
+    loader: () => import("./components/Word2pdf"),
+    loading: LoadingComponent
+})
 class App extends Component {
     render() {
         return (
@@ -44,6 +56,9 @@ class App extends Component {
                     <Route path="/md5" component={MD5}></Route>
                     <Route path="/guid" component={GUID}></Route>
                     <Route path="/img2base64" component={Img2base64}></Route>
+                    <Route path="/chinese2pinyin" component={Chinese2pinyin}></Route>
+                    <Route path="/simple2complex" component={Simple2complex}></Route>
+                    <Route path="/word2pdf" component={word2pdf}></Route>
                 </div>
             </BrowserRouter >
         );

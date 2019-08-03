@@ -33,7 +33,9 @@ class QrCode extends Component {
             hadCode: true
         })
     }
-
+        componentDidMount() {
+            document.title = '二维码生成'
+        }
     render() {
         return (
             <div>

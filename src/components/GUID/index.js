@@ -8,6 +8,9 @@ class GUID extends Component {
             value: ''
         }
     }
+    componentDidMount() {
+        document.title = '生成GUID'
+    }
     guid() {
         var guid = (this._G() + this._G() + "-" + this._G() + "-" + this._G() + "-" + this._G() + "-" + this._G() + this._G() + this._G()).toUpperCase();
         const input = document.getElementById("input")

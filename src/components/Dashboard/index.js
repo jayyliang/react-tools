@@ -17,8 +17,8 @@ class Dashboard extends Component {
         }
     }
     componentDidMount() {
+        document.title = '看板'
         let todoList = JSON.parse(localStorage.getItem('todo'))
-
         if (todoList) {
             this.setState({
                 todoList

@@ -10,6 +10,9 @@ class MD5 extends Component {
             value: ''
         }
     }
+        componentDidMount() {
+            document.title = 'MD5加密'
+        }
     copy() {
         const input = document.getElementById('md5-value')
         Utils.Copy(input.value)

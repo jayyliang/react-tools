@@ -1,5 +1,11 @@
-import React, { Component } from 'react'
-import { Button, Input, message } from 'antd'
+import React, {
+    Component
+} from 'react'
+import {
+    Button,
+    Input,
+    message
+} from 'antd'
 import './index.css'
 import Utils from '../../utils'
 class ColorExchange extends Component {
@@ -18,6 +24,10 @@ class ColorExchange extends Component {
             hadHex: false
         }
     }
+    componentDidMount() {
+        document.title = '颜色转换'
+    }
+
     colorRGB2Hex() {
         if (!this.state.r || !this.state.g || !this.state.b) {
             message.info('请检查您的输入')
@@ -74,36 +84,37 @@ class ColorExchange extends Component {
     render() {
         return (
             <div className="color-container">
-                <div><h4>RGB转16进制</h4></div>
+                <div> <h4> RGB转16进制 </h4></div>
                 <div className="color-content">
                     <div>
-                        <Input maxLength='3' onChange={e => { this.setState({ r: e.target.value }) }} className="container-input"></Input>
-                        <Input maxLength='3' onChange={e => { this.setState({ g: e.target.value }) }} className="container-input"></Input>
-                        <Input maxLength='3' onChange={e => { this.setState({ b: e.target.value }) }} className="container-input"></Input>
-                        <Button onClick={this.colorRGB2Hex.bind(this)} className="container-button" type="primary">转换</Button>
+                        <Input maxLength='3' onChange={e => { this.setState({ r: e.target.value }) }} className="container-input" ></Input>
+                        <Input maxLength='3' onChange={e => { this.setState({ g: e.target.value }) }} className="container-input" ></Input>
+                        <Input maxLength='3' onChange={e => { this.setState({ b: e.target.value }) }} className="container-input" ></Input>
+                        <Button onClick={this.colorRGB2Hex.bind(this)} className="container-button" type="primary" > 转换 </Button>
                     </div>
-                    {this.state.hex ? (
-                        <div className="rbg-container">
-                            <div style={{ backgroundColor: this.state.hex, width: 150, height: 150, borderRadius: '10px' }} className="rgb"></div>
-                            <Button onClick={this.copy.bind(this, 'hex')} className="rgb-copy" type="primary">复制</Button>
-                            <h4>{this.state.hex}</h4>
-                        </div>
-                    ) : ''}
-
+                    {this.state.hex ? (<div className="rbg-container" >
+                        <div style={{ backgroundColor: this.state.hex, width: 150, height: 150, borderRadius: '10px' }} className="rgb" > </div>
+                        <Button onClick={this.copy.bind(this, 'hex')} className="rgb-copy" type="primary" > 复制 </Button>
+                        <h4> {this.state.hex} </h4>
+                    </div>
+                    ) : ''
+                    }
                 </div>
-                <div className="color-content">
-                    <div><h4>16进制转rgb</h4></div>
+                <div className="color-content" >
+                    <div > <h4> 16 进制转rgb </h4></div>
                     <div>
                         <Input maxLength='7' onChange={e => { this.setState({ hexInput: e.target.value }) }} className="hex-input"></Input>
                         <Button onClick={this.hexToRGB.bind(this)} className="container-button" type="primary">转换</Button>
                     </div>
-                    {this.state.rgb ? (
-                        <div className="rbg-container">
-                            <div style={{ backgroundColor: this.state.rgb, width: 150, height: 150, borderRadius: '10px' }} className="rgb"></div>
-                            <Button onClick={this.copy.bind(this, 'hex')} className="rgb-copy" type="primary">复制</Button>
-                            <h4>{this.state.rgb}</h4>
-                        </div>
-                    ) : ''}
+                    {
+                        this.state.rgb ? (
+                            <div className="rbg-container" >
+                                <div style={{ backgroundColor: this.state.rgb, width: 150, height: 150, borderRadius: '10px' }} className="rgb" > </div>
+                                <Button onClick={this.copy.bind(this, 'hex')} className="rgb-copy" type="primary" > 复制 </Button>
+                                <h4> {this.state.rgb} </h4>
+                            </div>
+                        ) : ''
+                    }
                 </div>
             </div>
         )

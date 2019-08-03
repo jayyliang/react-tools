@@ -33,6 +33,9 @@ class HexConvert extends Component {
         Utils.Copy(value)
         message.info('已复制到粘贴板')
     }
+    componentDidMount() {
+        document.title = '进制转换'
+    }
     render() {
         return (
             <div className="hex-convert-container">
