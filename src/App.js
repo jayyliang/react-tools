@@ -48,6 +48,10 @@ const Translate = Loadable({
     loader: () => import("./components/Translate"),
     loading: LoadingComponent
 })
+const Mindmap = Loadable({
+    loader: () => import("./components/Mindmap"),
+    loading: LoadingComponent
+})
 class App extends Component {
     render() {
         return (
@@ -65,6 +69,7 @@ class App extends Component {
                     <Route path="/simple2complex" component={Simple2complex}></Route>
                     <Route path="/word2pdf" component={Word2pdf}></Route>
                     <Route path="/translate" component={Translate}></Route>
+                    <Route path="/mindmap" component={Mindmap}></Route>
                 </div>
             </BrowserRouter >
         );

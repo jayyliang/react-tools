@@ -38,7 +38,7 @@ class Left extends Component {
                         <Menu.Item key="12"> <Link to="" >PDF转Word</Link></Menu.Item >
                     </Menu.ItemGroup> */}
                     <Menu.ItemGroup key="g6" title="效率">
-                        <Menu.Item key="13"> <Link to="" >思维导图</Link></Menu.Item>
+                        <Menu.Item key="13"> <Link to="/mindmap" >生成图表</Link></Menu.Item>
                         <Menu.Item key="14"> <Link to="/translate" >在线翻译</Link></Menu.Item>
                     </Menu.ItemGroup>
                 </Menu>
