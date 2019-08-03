@@ -8,7 +8,7 @@ class Left extends Component {
     }
     render() {
         return (
-            <div style={{overflow:"scroll",height:'100vh'}}>
+            <div style={{overflow:"scroll",height:'100vh',overflowX:"hidden"}}>
                 <Menu
                     onClick={this.handleClick}
                     style={{ width: 256 }}
@@ -39,7 +39,7 @@ class Left extends Component {
                     </Menu.ItemGroup> */}
                     <Menu.ItemGroup key="g6" title="效率">
                         <Menu.Item key="13"> <Link to="" >思维导图</Link></Menu.Item>
-                        <Menu.Item key="14"> <Link to="" >在线翻译</Link></Menu.Item>
+                        <Menu.Item key="14"> <Link to="/translate" >在线翻译</Link></Menu.Item>
                     </Menu.ItemGroup>
                 </Menu>
             </div>

@@ -39,8 +39,13 @@ const Simple2complex = Loadable({
     loader: () => import("./components/Simple2complex"),
     loading: LoadingComponent
 })
-const word2pdf = Loadable({
+const Word2pdf = Loadable({
     loader: () => import("./components/Word2pdf"),
+    loading: LoadingComponent
+})
+
+const Translate = Loadable({
+    loader: () => import("./components/Translate"),
     loading: LoadingComponent
 })
 class App extends Component {
@@ -58,7 +63,8 @@ class App extends Component {
                     <Route path="/img2base64" component={Img2base64}></Route>
                     <Route path="/chinese2pinyin" component={Chinese2pinyin}></Route>
                     <Route path="/simple2complex" component={Simple2complex}></Route>
-                    <Route path="/word2pdf" component={word2pdf}></Route>
+                    <Route path="/word2pdf" component={Word2pdf}></Route>
+                    <Route path="/translate" component={Translate}></Route>
                 </div>
             </BrowserRouter >
         );
